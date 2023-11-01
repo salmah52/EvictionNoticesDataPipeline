@@ -16,7 +16,7 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 San Francisco Open Data API (EVICTION dataset)
 
 2. ETL (Extract, Transform, Load) Pipeline:
--Apache Airflow for orchestration and automation
+- Apache Airflow for orchestration and automation
 - Custom operators for extracting data from the API and loading it into Google Cloud Storage (GCS)
 - Google Cloud Storage (GCS) for intermediate storage of raw data
 
