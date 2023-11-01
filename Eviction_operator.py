@@ -49,3 +49,7 @@ class WebToGCSHKOperator(BaseOperator):
         else:
             self.log.error(f"Failed to retrieve data. Status code: {response.status_code}")
             raise ValueError(f"Failed to retrieve data. Status code: {response.status_code}")
+
+
+# If the response status code is not 200 (indicating an unsuccessful response), the operator logs an error message and raises an exception to indicate that data retrieval has failed.
+# This custom operator is designed to handle the process of fetching data from the API endpoint and storing it in GCS. It is integrated into an Airflow DAG to automate the data pipeline.
