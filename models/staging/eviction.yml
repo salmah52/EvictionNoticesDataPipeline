@@ -1,0 +1,37 @@
+version: 2
+
+
+sources:
+  - name: Main_eviction009
+    database: fleet-space-403010
+    schema: Main_eviction009
+    tables:
+      - name: main_evictiondata_table
+      
+        # freshness:
+        #   warn_after: {count: 12, period: hour}
+        #   error_after: {count: 24, period: hour}
+        # loaded_at_field: created_at
+
+
+
+# # dbt run-operation generate_base_model --args '{"source_name": "Main_eviction009", "table_name": "eviction_data_table"}'
+
+
+# # dbt run-operation generate_base_model --args '{"source_name": "thelook_ecommerce", "table_name": "inventory_items"}'
+
+# # dbt run-operation generate_base_model --args '{"source_name": "thelook_ecommerce", "table_name": "order_items"}'
+
+
+# # dbt run-operation generate_base_model --args '{"source_name": "thelook_ecommerce", "table_name": "products"}'
+
+
+# # dbt run-operation generate_base_model --args '{"source_name": "thelook_ecommerce", "table_name": "events"}'
+# # dbt run -s src_ecommerceproducts   salmah_dbt08/models/staging/stg_ecommerce_products.yml
+
+# # dbt test -s src_ecommerceproducts
+
+# # dbt run -s stg_eviction
+# #  dbt run -s int_order_items_products
+
+# # dbt test -s stg_eviction
