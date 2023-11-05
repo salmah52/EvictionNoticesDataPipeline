@@ -35,7 +35,7 @@ models:
         description: "When the order was returned"
 
       - name: order_delivered_at
-        description: "When the order was delivered"
+        description: "When the order was deliveredhhhhhhhhhh"
 
       - name: order_shipped_at
         description: "When the order was shipped"
