@@ -34,9 +34,14 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 - **Name:** Eviction Notices
 - **Category:** Housing and Buildings
 - **Data Source:** San Francisco Rent Board
-- **Description:** This dataset contains eviction notices filed with the San Francisco Rent Board as per San Francisco Administrative Code 37.9(c). It's important to note that an eviction notice does not necessarily indicate that a tenant was eventually evicted; therefore, the notices may differ from actual evictions.
+- **Description:** This dataset contains eviction notices filed with the San Francisco Rent Board as per San Francisco Administrative Code 37.9(c).
+
 
 ## Columns in the Dataset- Data Dictionary
+
+## Rows - 421k   
+## Columns - 30
+
 
 - **Eviction ID (Text):** The internal case record ID used for administrative purposes.
 - **Address (Text):** The address where the eviction notice was issued (block level).
