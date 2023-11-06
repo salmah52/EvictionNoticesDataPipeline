@@ -39,9 +39,8 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 
 ## Columns in the Dataset- Data Dictionary
 
-## Rows - 421k   
-## Columns - 30
-
+**Rows** - 421k   
+**Columns** - 30
 
 - **Eviction ID (Text):** The internal case record ID used for administrative purposes.
 - **Address (Text):** The address where the eviction notice was issued (block level).
