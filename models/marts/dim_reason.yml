@@ -1,0 +1,167 @@
+version: 2
+
+models:
+  - name: dim_reason
+    description: "Table describing and detailing every reason on a per row basis"
+    columns:
+      - name: reason_id
+        description: "A unique identifier for each reason."
+       
+        tests:
+          - not_null
+          - unique
+
+      - name: non_payment
+        description: "This field is checked (true) if the landlord indicated non-payment of rent as grounds for eviction."
+        data_type: BOOLEAN
+
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: breach
+        description: "This field is checked (true) if the landlord indicated breach as grounds for eviction."
+        data_type: BOOLEAN
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: nuisance
+        description: "This field is checked (true) if the landlord indicated nuisance as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: illegal_use
+        description: "This field is checked (true) if the landlord indicated illegal use as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: failure_to_sign_renewal
+        description: "This field is checked (true) if the landlord indicated failure to sign renewal as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: access_denial
+        description: "This field is checked (true) if the landlord indicated access denial as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: unapproved_subtenant
+        description: "This field is checked (true) if the landlord indicated unapproved subtenant as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: owner_move_in
+        description: "This field is checked (true) if the landlord indicated owner move-in as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: demolition
+        description: "This field is checked (true) if the landlord indicated demolition as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: capital_improvement
+        description: "This field is checked (true) if the landlord indicated capital improvement as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: substantial_rehab
+        description: "This field is checked (true) if the landlord indicated substantial rehab as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: ellis_act_withdrawal
+        description: "This field is checked (true) if the landlord indicated Ellis Act withdrawal as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: condo_conversion
+        description: "This field is checked (true) if the landlord indicated condo conversion as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: roommate_same_unit
+        description: "This field is checked (true) if the landlord indicated roommate of the same unit as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: other_cause
+        description: "This field is checked (true) if the landlord indicated other causes as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: late_payments
+        description: "This field is checked (true) if the landlord indicated late payments as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: lead_remediation
+        description: "This field is checked (true) if the landlord indicated lead remediation as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: development
+        description: "This field is checked (true) if the landlord indicated development as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false
+
+      - name: good_samaritan_ends
+        description: "This field is checked (true) if the landlord indicated the end of the Good Samaritan policy as grounds for eviction."
+        tests:
+          - accepted_values:
+              values:
+                - true
+                - false

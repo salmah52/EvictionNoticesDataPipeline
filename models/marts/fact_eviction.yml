@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fact_eviction
+    description: >
+      A table that combines data from various dimensions to represent eviction-related information.
+      This fact table links to the `dim_location` dimension to provide location details,
+      the `dim_reason` dimension to provide eviction reasons, and the `dim_date` dimension to provide
+      date-related information for each eviction event.
+
+    columns:
+      - name: eviction_id
+        description: "A unique identifier for each eviction event."
+        tests:
+          - not_null
+          - unique
+
+      - name: supervisor_district
+        description: "The supervisor district associated with the eviction event."
+
+      - name: location_id
+        description: "A unique identifier for the location of the eviction event, referencing the `dim_location` dimension."
+
+      - name: reason_id
+        description: "A unique identifier for the reason of the eviction event, referencing the `dim_reason` dimension."
+
+      - name: date_id
+        description: "A unique identifier for the date of the eviction event, referencing the `dim_date` dimension."

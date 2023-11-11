@@ -3,10 +3,41 @@ version: 2
 
 models:
   - name: dim_location
-    description: " Table describing and detailing every order on per row basis "
+    description: "This table contains location information."
     columns:
       - name: location_id
-        description: "The order Id of the order"
+        description: "A unique identifier for the location, often created by concatenating the zip code and address."
+        data_type: STRING
         tests:
           - not_null
           - unique
+
+      - name: address
+        description: "The address of the location."
+        data_type: STRING
+      
+
+      - name: city
+        description: "The city where the location is situated."
+        data_type: STRING
+    
+
+      - name: state
+        description: "The state where the location is located."
+        data_type: STRING
+        
+
+      - name: zip
+        description: "The ZIP code of the location."
+        data_type: STRING
+    
+
+      - name: longitude
+        description: "The longitude coordinate of the location."
+        data_type: STRING
+        
+
+      - name: latitude
+        description: "The latitude coordinate of the location."
+        data_type: STRING
+      

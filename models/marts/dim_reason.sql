@@ -22,7 +22,7 @@ WITH source AS (
     {{ adapter.quote("good_samaritan_ends") }}
   FROM  {{ ref("stg_eviction") }}
 )
-SELECT DISTINCT * FROM source
+SELECT * FROM source
 
 
 

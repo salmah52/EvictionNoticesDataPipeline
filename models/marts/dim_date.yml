@@ -1,12 +1,56 @@
 ## Testing, documentation, Referencing and configuration
 version: 2
-
 models:
   - name: dim_date
-    description: "date id "
+    description: "This table contains information related to dates."
     columns:
       - name: date
-        description: "The order Id of the order"
+        description: "The timestamp representing the date."
+        data_type: TIMESTAMP
         tests:
           - not_null
           - unique
+
+      - name: constraints_date
+        description: "A string representing constraints on the date."
+        data_type: STRING
+
+      - name: year
+        description: "The year extracted from the date."
+        data_type: INT64
+
+      - name: month
+        description: "The month extracted from the date."
+        data_type: INT64
+
+      - name: day
+        description: "The day extracted from the date."
+        data_type: INT64
+
+      - name: weekday
+        description: "The name of the weekday (e.g., Monday, Tuesday) derived from the date."
+        data_type: STRING
+
+      - name: quarter
+        description: "The quarter of the year extracted from the date."
+        data_type: INT64
+
+      - name: week_number
+        description: "The week number extracted from the date."
+        data_type: INT64
+
+      - name: weekday_weekend
+        description: "Indicates whether the date falls on a weekday or a weekend."
+        data_type: STRING
+
+      - name: holiday
+        description: "Indicates whether the date is a holiday or non-holiday."
+        data_type: STRING
+
+      - name: leap_year
+        description: "Indicates whether the year is a leap year or non-leap year."
+        data_type: STRING
+
+      - name: season
+        description: "Categorizes the date into a season (e.g., Winter, Spring, Summer, Fall)."
+        data_type: STRING

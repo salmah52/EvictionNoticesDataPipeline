@@ -10,7 +10,8 @@ WITH dim_location AS (
     FROM {{ ref("stg_eviction") }}
 )
 
---SELECT DISTINCT *
---FROM dim_location
+SELECT  *
+FROM dim_location
 
-select * from  dim_location
+-- select * from  dim_location
+

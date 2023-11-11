@@ -15,7 +15,7 @@ models:
           - unique
           - not_null:
               severity: warn
-              
+
       - name: address
         description: >
           The address where the eviction notice was issued. The addresses are represented at the block level.
@@ -39,15 +39,20 @@ models:
           The date on which the eviction notice was filed with the Rent Board of Arbitration.
         tests:
           - unique
-          #- type: date
+          - not_null:
+              severity: warn
+
 
       - name: non_payment
         description: >
-          This field is checked (true) if the landlord indicated non-payment of rent as a grounds for eviction.
+         This field represents whether the landlord indicated non-payment of rent as grounds for eviction.
+      
+      
 
       - name: breach
         description: >
           This field is checked (true) if the landlord indicated breach of lease as a grounds for eviction.
+       
 
       - name: nuisance
         description: >
@@ -101,7 +106,9 @@ models:
         description: >
           This field is checked (true) if some other cause not covered by the admin code was indicated by the landlord. 
           These are not enforceable grounds, but are indicated here for record keeping.
-
+        tests:
+          - not_null
+          
       - name: late_payments
         description: >
           This field is checked (true) if the landlord indicated habitual late payment of rent as a grounds for eviction.
